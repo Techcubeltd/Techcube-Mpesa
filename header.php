@@ -22,7 +22,7 @@ echo <<<HeaderFunction
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>iEducate School Management System</title>
+    <title>iLibrary System</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@ echo <<<HeaderFunction
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">iEducate</a>
+                <a class="navbar-brand" href="index.php">iLibrary System</a>
             </div>
                 
                                    
@@ -117,6 +117,9 @@ echo <<<HeaderFunction
             <ul class="dropdown-menu">
                 <li><a href="books.php">Course Books</a></li>
                 <li><a href="librarybooks.php">Library books</a></li>
+
+                <li><a href="pbooks.php">Procure books</a></li>
+
             </ul>
         </li>
           <!--li class="dropdown">
@@ -208,7 +211,7 @@ echo <<<HeaderFunction
 
 
            <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Reports<b class="caret"></b></a>
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Statistics<b class="caret"></b></a>
             <ul class="dropdown-menu">
             
             <li class="dropdown-submenu"> <a tabindex="-1" href="#">Staff</a>
@@ -230,19 +233,27 @@ echo <<<HeaderFunction
             </ul>
         </li>
 
-        <form class="navbar-form navbar-left" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-primary btn-xs">Submit</button>
-</form>
+
+           <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Reports<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            
+            <li> <a tabindex="-1" href="reports.php">Reports</a>
+            
+            </li>
+            
+            </ul>   
+            </li>
+
+      
+
 
 
         <li class="dropdown pull-right">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">$user <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li><a href="logOut.php">Log Out</a></li>
-                 <li><a href="admin/index.php">Admin Panel</a></li>
+                 <!--li><a href="admin/index.php">Admin Panel</a></li-->
             </ul>
         </li>
 
@@ -350,8 +361,7 @@ echo <<<HeaderFunction
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>iEducate School Management System</title>
-
+     <title>iLibrary System</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -372,7 +382,7 @@ echo <<<HeaderFunction
     <![endif]-->
 
 </head>
-    <div id="wrapper" >
+        <div id="wrapper" >
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -383,46 +393,209 @@ echo <<<HeaderFunction
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">iEducate School Management System</a>
+                <a class="navbar-brand" href="index.php">iLibrary System</a>
             </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                      
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> $user <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                       <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Configuration</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="logOut.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
+                
+                                   
+    
+        <ul class="nav top-nav">
+
+           <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">BOOKS<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="cbooks.php">Course Books</a></li>
+                <li><a href="ulibrarybooks.php">Library books</a></li>
             </ul>
+        </li>
+      
+
+ 
+
+         <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Administration<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            
+            <li class="dropdown-submenu"> <a tabindex="-1" href="#">Students</a>
+            <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="student.php">Students Registration</a></li>
+            <li><a href="sbcode.php">Students Barcode</a></li>
+            <li><a href="stdetails.php">Students Details</a></li>    
+            </ul>   
+            </li>
+            
+            <li class="dropdown-submenu"> <a tabindex="-1" href="#">Subjects</a>
+            <ul class="dropdown-menu">
+             <li><a href="subjects.php">Add Subjects</a></li>
+            <li><a href="sdetails.php">Subjects Details</a></li>
+            
+
+             </ul> 
+                
+            </li>
+
+
+            </ul>
+        </li>
+           <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Issue Books<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="issue.php">Issue Students</a></li>
+                 <li><a href="issuet.php">Issue Teachers</a></li>
+            </ul>
+        </li>
+
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Return Books<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                  <li><a href="rtbk.php">Return Book</a></li>
+                 <li><a href="rtn.php">Staff Return </a></li>
+            </ul>
+        </li>
+
+         <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Fines<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                  <li><a href="fine.php">Student Fines</a></li>
+                 
+            </ul>
+        </li>
+
+
+             <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Course Books<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+
+
+            <li class="dropdown-submenu"> <a tabindex="-1" href="#">Books</a>
+            <ul class="dropdown-menu">
+             <li><a href="books.php">Add Book</a></li>
+            <li><a href="cbdetails.php">Books Details</a></li>
+            </ul> 
+             </li>
+
+
+
+                <li><a href="issuec.php">Issue Students</a></li>
+                 <li><a href="issuetc.php">Issue Teachers</a></li>
+            </ul>
+        </li>
+
+
+           <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Statistics<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            
+            <li class="dropdown-submenu"> <a tabindex="-1" href="#">Staff</a>
+            <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="staffissues.php">Book issues</a></li>
+            <li><a href="staffcbooks.php">Course Books</a></li>
+            <li><a href="stbcode.php">Staff Barcode</a></li>
+            <li><a href="staffdetails.php">Staff Details</a></li>    
+            </ul>   
+            </li>
+            
+            <li class="dropdown-submenu"> <a tabindex="-1" href="#">Students</a>
+            <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="studentissues.php">Book issues</a></li>
+            <li><a href="coursestd.php">Course Books</a></li>
+            </ul>   
+            </li>
+
+            </ul>
+        </li>
+
+
+           <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Reports<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            
+            <li> <a tabindex="-1" href="reports.php">Reports</a>
+            
+            </li>
+            
+            </ul>   
+            </li>
+
+      
+
+
+
+        <li class="dropdown pull-right">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">$user <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="logOut.php">Log Out</a></li>
+                 <!--li><a href="admin/index.php">Admin Panel</a></li-->
+            </ul>
+        </li>
+
+    </ul>
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    <li class="info">
+                        <a href="dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="staffduty.php"><i class="fa fa-fw fa-bar-chart-o"></i>Staff on Duty</a>
+                        <a href="staffcreate.php"><i class="fa fa-fw fa-bar-chart-o"></i>Add New Staff Members</a>
                     </li>
                     <li>
-                        <a href="prefectsdetails.php"><i class="fa fa-fw fa-table"></i>Students Duties</a>
-                    </li>
-                    <li>
-                        <a href="profile.php"><i class="fa fa-fw fa-edit"></i>Profile</a>
+                        <a href="staffdetails.php"><i class="fa fa-fw fa-table"></i>Staff Details</a>
                     </li>
                    
+                    <li>
+                        <a href="manageusers.php"><i class="fa fa-fw fa-edit"></i>Users</a>
+                    </li>
+                   
+                   
+ <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-arrows-v"></i> Configuration <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="terms.php">School Year Setup</a>
+
+                            </li>
+                            <li>
+                                <a href="periodc.php">Study Periods Setup</a>
+                            </li>
+                            <li>
+                                <a href="streams.php">Streams Setup</a>
+                            </li><li>
+                                <a href="classes.php">Classes Setup</a>
+                            </li>
+                            <li>
+                                <a href="advance.php">Advance Classes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                      <!--li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="scdetails.php">View School Terms</a>
+
+                            </li>
+                            <li>
+                                <a href="period.php">View Study Periods</a>
+                            </li>
+                            <li>
+                                <a href="strs.php">View Streams</a>
+                            </li><li>
+                                <a href="classdetails.php">View ClassRooms</a>
+                            </li>
+                        </ul>
+                    </li-->
+
+                   
+
+
+                   
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-
     <!-- /#wrapper -->
 <div id="page-wrapper">
 <div class="container-fluid" >

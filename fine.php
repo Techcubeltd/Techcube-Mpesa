@@ -8,30 +8,20 @@ $q2="select * from fine where status='unpaid'";
 
 $result2=mysql_query($q2);
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"> </script>
 
-<script type="text/javascript" src="search.js"> </script>
+<script type="text/javascript" src="datatable.js"> </script>
 
-
+<link rel="stylesheet" type="text/css" href="datatable.css">
 <div class="container-fluid">
 
         <div class="col-md-3">
-            <form action="#" method="get">
-                <div class="input-group">
-                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
-                    <input class="form-control" id="system-search" name="q" placeholder="Search for" >
-                    
-
-                </div>
-                
-            </form>
-        </div>
-<div class="col-md-9">
+         
 <a class="btn btn-primary" href="rtbk.php">Late Book Returns</a>
   
 </div>
 
-<table class=" table table-list-search"  align="center" id="tableid" datapagesize="20"> 
+<table class=" display"  align="center" id="tableid" datapagesize="20"   >
          <thead>
           <th colspan="11" >
           
@@ -89,4 +79,11 @@ $result2=mysql_query($q2);
 
             </table>
             </div>
-            </div
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function() {
+    $('#tableid').dataTable( {
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+    } );
+} );
+            </script>

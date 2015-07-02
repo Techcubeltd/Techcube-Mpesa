@@ -20,7 +20,7 @@ class PDF extends FPDF
 //Page header
 function Header()
 {
-	//$this->Image('images/logoPdf.JPG',5);
+		$this->Image('images/logo.jpg',5);
 	$this->Ln();
 		$this->SetFont('Times','B',20);
 		$this->SetFillColor(255);

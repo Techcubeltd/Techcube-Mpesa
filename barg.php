@@ -45,23 +45,14 @@ $row=mysql_fetch_array($result);
  </div> 
 <br />
 <div class="row-fluid">
-<?php
-$quan=$row["quantity"];
-for ($i=1; $i <$quan ; $i++) { 
-  # code...
+
+
+
   
-
- echo"<img id='barcodei'>" ;
-
-?>
-
-
-   <?php
-   }
-   ?>
+   
  <br />
 <br />
-   <button class="btn btn-info btn-xs" type="submit" target onclick='$("#barcodei").JsBarcode("<?php echo $i?>",{format:"CODE128",displayValue:true,fontSize:20});' >GENERATE COPY BARCODES</button>
+   <!--a href="mult.php?bcode=<?php echo $bcode;?>" class="btn btn-info btn-xs" type="submit" >GENERATE COPY BARCODES</a-->
 
 
  </div>

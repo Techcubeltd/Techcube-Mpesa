@@ -95,6 +95,7 @@ while ($row=mysql_fetch_array($result)){;
 </tr>
 </table> 
 <button class="btn btn-success" href="processpay.php" target="_blank" type="submit" id="paybtn" target="_bank">Record Payment</button>
+
 <script type="text/javascript">
   $(document).one('click', '#paybtn', function(){
     alert('Process Payment');

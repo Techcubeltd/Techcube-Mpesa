@@ -82,7 +82,7 @@ $assignedto=$_SESSION['user'];
   <tr>
 
       <td>Date</td>
-    <td><input name="da" type="date" class="date"></td>
+    <td><input name="da" type="date" class="date" value=<?php echo date('Y-m-d');?>></td>
     </tr>
       
       

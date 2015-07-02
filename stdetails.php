@@ -5,10 +5,14 @@ $query="select * from students order by academiclevel asc";
 $result=mysql_query($query);
 
 ?>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"> </script>
+
+<script type="text/javascript" src="datatable.js"> </script>
+
+<link rel="stylesheet" type="text/css" href="datatable.css">
 <div class="container-fluid">
 
-
-<table class=" table table-bordered"  align="center" id="tableid" datapagesize="20"> 
+<table class=" display"  align="center" id="tableid" datapagesize="20"   >
          <thead>
           <th colspan="11" >
           
@@ -49,4 +53,12 @@ $result=mysql_query($query);
 
             </table>
             </div>
-            </div
+            </div>
+            
+            <script type="text/javascript">
+              $(document).ready(function() {
+    $('#tableid').dataTable( {
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+    } );
+} );
+            </script>

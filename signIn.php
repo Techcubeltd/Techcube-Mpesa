@@ -88,7 +88,7 @@ else
       </label>
       <button name='submit' class="btn btn-lg btn-primary btn-block" type="submit">Login</button>  
       <br/>
-      <p> <a href="signUp.html">Sign up to use DMS</a></p> 
+      <p> <a href="signUp.html">Sign up to use iLibrary</a></p> 
     </form>
   </div>
        

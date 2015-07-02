@@ -1,0 +1,22 @@
+
+<?php
+
+include('header.php');
+//require_once( "OpenBarcode.php");
+
+
+$fh = fopen('/Users/Simon/downloads/data.txt', 'w');
+
+$result = mysql_query("SELECT adminno FROM students");
+while ($row = mysql_fetch_array($result)) {
+    $last = end($row);
+    foreach ($row as $item) {
+        fwrite($fh, $item);
+        if ($item != $last)
+            fwrite($fh, "\t");
+    }
+    fwrite($fh, "\n");
+}
+fclose($fh);
+?>
+

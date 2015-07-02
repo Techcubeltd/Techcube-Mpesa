@@ -19,13 +19,13 @@ $assignedto=$_SESSION['user'];
 	</tr>
 	<tr>
 		<td>Date of Birth</td>
-		<td><input name="bdate" type="date" ></td>
+		<td><input name="bdate" type="date" value=<?php echo date('Y-m-d');?>></td>
 		<td>Admin No</td>
 		<td><input name="adm" ></td>
 	</tr>
 	<tr>
 		<td>Admission Date</td>
-		<td><input name="jdate" type="date"></td>
+		<td><input name="jdate" type="date"  value=<?php echo date('Y-m-d');?>></td>
 		<td>Gender</td>
 		<td><select name="gender" id="gen" >
 		<option>Male</option>

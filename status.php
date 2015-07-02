@@ -1,21 +1,19 @@
 <?php 
 require_once('header.php');
 
-if($_POST)
-{
-	$user=$_SESSION['user'];
-$quantity=sanitizeString($_POST['quan']);
-$bcode=sanitizeString($_REQUEST['bcode']);
+if($_POST){
+$quan=sanitizeString($_POST['quant']);
+$bcode=sanitizeString($_POST['bcode']);
 
 
 	# code...
 	
-$uquery= "UPDATE book set quantity=('$quantity'+quantity) where barcode='$bcode' ";
+$query= "UPDATE book set quantity=quantity+'$quan' where barcode='$bcode' ";
  
-mysql_query($uquery);
+mysql_query($query);
 
 echo "book procurement succesfull <br /> <br />";
-echo "<a href='bdetails.php' class='btn btn-primary btn-xs' type='submit'>View All Books</a> ";
+echo "<a href='book.php' class='btn btn-primary btn-xs' type='submit'>View All Books</a> ";
 
 
 
